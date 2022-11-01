@@ -20,6 +20,7 @@ import java.util.Iterator;
 import java.util.UUID;
 import net.citizensnpcs.Settings.Setting;
 import net.citizensnpcs.api.CitizensAPI;
+import net.citizensnpcs.api.event.DespawnReason;
 import net.citizensnpcs.api.event.NPCCreateEvent;
 import net.citizensnpcs.api.npc.AbstractNPC;
 import net.citizensnpcs.api.npc.NPC;
@@ -35,8 +36,10 @@ import net.citizensnpcs.trait.ArmorStandTrait;
 import net.citizensnpcs.trait.LookClose;
 import net.citizensnpcs.trait.MountTrait;
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
+import org.bukkit.inventory.ItemStack;
 
 /**
  * @author Daniel Saukel
@@ -46,6 +49,11 @@ public class DNPCRegistry implements NPCRegistry {
     @Override
     public NPC createNPC(EntityType type, String name) {
         return createNPC(type, UUID.randomUUID(), 0, name);
+    }
+
+    @Override
+    public NPC createNPC(EntityType entityType, String s, Location location) {
+        return null;
     }
 
     @Override
@@ -69,6 +77,11 @@ public class DNPCRegistry implements NPCRegistry {
     }
 
     @Override
+    public NPC createNPCUsingItem(EntityType entityType, String s, ItemStack itemStack) {
+        return null;
+    }
+
+    @Override
     public void deregister(NPC npc) {
         CitizensAPI.getNPCRegistry().deregister(npc);
     }
@@ -76,6 +89,11 @@ public class DNPCRegistry implements NPCRegistry {
     @Override
     public void deregisterAll() {
         CitizensAPI.getNPCRegistry().deregisterAll();
+    }
+
+    @Override
+    public void despawnNPCs(DespawnReason despawnReason) {
+
     }
 
     @Override
@@ -94,6 +112,11 @@ public class DNPCRegistry implements NPCRegistry {
     }
 
     @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
     public NPC getNPC(Entity entity) {
         return CitizensAPI.getNPCRegistry().getNPC(entity);
     }
@@ -101,6 +124,11 @@ public class DNPCRegistry implements NPCRegistry {
     @Override
     public boolean isNPC(Entity entity) {
         return CitizensAPI.getNPCRegistry().isNPC(entity);
+    }
+
+    @Override
+    public void saveToStore() {
+
     }
 
     @Override

@@ -67,8 +67,8 @@
         </dependency>
         <dependency>
             <groupId>net.citizensnpcs</groupId>
-            <artifactId>citizens</artifactId>
-            <version>2.0.25-SNAPSHOT</version>
+            <artifactId>citizens-main</artifactId>
+            <version>2.0.30-SNAPSHOT</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>
@@ -104,7 +104,7 @@
         <dependency>
             <groupId>com.gmail.filoghost.holographicdisplays</groupId>
             <artifactId>holographicdisplays-api</artifactId>
-            <version>2.4.5</version>
+            <version>2.4.9</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -128,7 +128,7 @@
         <dependency>
             <groupId>com.alessiodp.parties</groupId>
             <artifactId>parties-api</artifactId>
-            <version>3.1.10</version>
+            <version>3.2.6</version>
         </dependency>
     </dependencies>
     <repositories>
